@@ -1,0 +1,62 @@
+Certainly! Below is a structured literature review focusing on key papers, their relationships, and contributions related to the estimation of causal effects under interference, particularly in social networks.
+
+---
+
+**Key Research Themes:**
+
+1. **Causal Inference with Interference**
+   - Exploration of experimental and observational study designs considering spillover and treatment interference.
+   - Development of methodologies to estimate causal effects when traditional assumptions like SUTVA (Stable Unit Treatment Value Assumption) are violated.
+
+2. **Randomized Experiments in Social Networks**
+   - Application of causal inference methodologies to social network data.
+   - Examination of how treatments and their effects propagate through networks.
+
+3. **Extensions to Two-Stage and Hierarchical Designs**
+   - Application of two-stage designs and hierarchical treatment assignments.
+   - Introduction of frameworks for handling partial interference.
+
+---
+
+**Important Papers in Each Theme:**
+
+1. **Causal Inference with Interference:**
+   - **[Estimating Average Causal Effects under General Interference, with Application to a Social Network Experiment]** by Peter M. Aronow and Cyrus Samii:
+     - Provides a general framework for estimating causal effects under interference where treatment effects propagate through social networks.
+     - Uses a randomization-based approach with focus on arbitrary interference forms and inverse probability weighting.
+     - Includes empirical evaluation with a field experiment on anti-conflict norms in schools.
+
+   - **[Causal Effects Under Interference]**:
+     - Focuses on distinguishing between direct and indirect treatment exposures and the effects thereof.
+     - Applies methodology across school classes from the Add Health study to analyze peer effects.
+
+2. **Randomized Experiments in Social Networks:**
+   - **[Methods for Inference with Exact Tests under Partial Interference]** by Rosenbaum (2007):
+     - Discusses exact test methods for experiments where partial interference is present, particularly emphasizing when units can interact within a defined structure.
+     - Important for laying foundational methods on hypothesis testing under interference.
+
+3. **Extensions to Two-Stage and Hierarchical Designs:**
+   - **[Randomization-Based Estimators for Group-Average Causal Effects]** by Hudgens and Halloran, followed by extensions by Tchetgen Tchetgen and VanderWeele (2012):
+     - Introduces estimators specifically for group-average causal effects under interference, outlining variance estimation and observational study extensions.
+     - Liu and Hudgens (2014) further extend this to asymptotic results for two-stage designs.
+
+---
+
+**How Papers Build Upon or Relate to Each Other:**
+
+- **Aronow and Samii's work** integrates and extends previous frameworks by establishing methodologies applicable to complex social network experiments where interference is non-negligible. This builds upon **Rosenbaum's foundations on partial interference**, adapting the inference methods to social network structures.
+  
+- The hierarchical designs explored by **Hudgens and Halloran**, and further developed by **Tchetgen Tchetgen and VanderWeele**, underpin the two-stage interference scenarios. **Liu and Hudgens** expanded this, providing groundwork that **Aronow and Samii** leverage for broader applicability to social networks in their study.
+
+- Across these works, a common thread is the recognition of violations in classic causal assumptions (like SUTVA) when dealing with networks, necessitating novel methodological approaches and extensions to traditional designs.
+
+---
+
+**Seminal Works and Their Influence:**
+
+- **Rosenbaum (2007)** is seminal in setting the stage for inference under interference via exact testing methods, greatly influencing later work on structured interference scenarios.
+- The frameworks provided by **Hudgens and Halloran**, and subsequent extensions, are pivotal in evolving the understanding and technological application of causal inference in hierarchically structured and partially interfering settings, directly impacting the methodologies utilized in Aronow and Samii's social network experiment analysis.
+
+--- 
+
+This overview encapsulates the dynamic interplay of research efforts to address the complexities posed by interference in causal effect estimation, highlighted through social network experimental contexts.

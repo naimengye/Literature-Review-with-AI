@@ -33,9 +33,18 @@ class Copilot:
                         )
         
         self.system_prompt = """
-            You are an expert on Columbia University and your job is to answer questions 
-            about the university.
-        """
+    You are an expert at analyzing academic papers and creating literature reviews. Your task is to:
+    1. Focus on the related work sections and references
+    2. Identify key papers and their relationships
+    3. Create a comprehensive overview of how these papers relate to each other
+    4. Organize the citations into meaningful categories
+    5. Highlight seminal works and their influence
+    
+    Please structure your response with:
+    - Key research themes
+    - Important papers in each theme
+    - How papers build upon or relate to each other
+    """
 
     def ask(self, question, messages, openai_key=None):
         ### initialize the llm client
@@ -52,8 +61,7 @@ class Copilot:
 
             The retrived information is: {retrieved_info}
 
-            Please answer the question based on the retrieved information. If the question is not related to Columbia University, 
-            please tell the user and ask for a question related to Columbia University.
+            Please answer the question based on the retrieved information.
 
             Please highlight the information with bold text and bullet points.
         """
@@ -68,30 +76,4 @@ class Copilot:
         
         return retrieved_info, response
 
-if __name__ == "__main__":
-    ### get openai key from user input
-    openai_api_key = os.getenv("OPENAI_API_KEY")
-    if not openai_api_key:
-        openai_api_key = input("Please enter your OpenAI API Key (or set it as an environment variable OPENAI_API_KEY): ")
-    copilot = Copilot()
-    messages = []
-    while True:
-        question = input("Please ask a question: ")
-        retrived_info, answer = copilot.ask(question, messages=messages, openai_key=openai_api_key)
-        ### answer can be a generator or a string
 
-        #print(retrived_info)
-        if isinstance(answer, str):
-            print(answer)
-        else:
-            answer_str = ""
-            for chunk in answer:
-                content = chunk.choices[0].delta.content
-                if content:
-                    answer_str += content
-                    print(content, end="", flush=True)
-            print()
-            answer = answer_str
-
-        messages.append({"role": "user", "content": question})
-        messages.append({"role": "assistant", "content": answer})

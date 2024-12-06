@@ -1,0 +1,16 @@
+# config.yaml
+
+# OpenAI Configuration
+openai_api_key: ''
+
+# Semantic Scholar Configuration
+#semantic_scholar_api_key: 'your_semantic_scholar_api_key_here'
+
+# IEEE Xplore Configuration
+#ieee_api_key: 'your_ieee_api_key_here'
+
+# ACM Digital Library Configuration
+#acm_api_key: 'your_acm_api_key_here'
+
+# PubMed Configuration
+#pubmed_email: 'your_email@example.com'
